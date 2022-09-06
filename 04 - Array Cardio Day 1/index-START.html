@@ -157,7 +157,7 @@
                 const [bLast, bFirst] = b.split(", ");
                 return aFirst > bFirst ? 1 : -1;
             });
-            console.log(alphaSort);
+            // console.log(alphaSort);
 
             // 8. Reduce Exercise
             // Sum up the instances of each of these
@@ -177,6 +177,15 @@
                 "car",
                 "truck",
             ];
+
+            const sums = data.reduce((newObject, item) => {
+                if (!newObject[item]) {
+                    newObject[item] = 0;
+                }
+                newObject[item]++;
+                return newObject;
+            }, {});
+            console.log(sums);
         </script>
     </body>
 </html>
